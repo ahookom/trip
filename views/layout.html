@@ -4,9 +4,28 @@
   <head>
     <title>Trip Planner!!!</title>
     <link rel='stylesheet' href='stylesheets/style.css' />
+    <link rel='icon' type='image/png' href='images/planefavicon.png'/>
   </head>
 
-  <body>  
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top clearfix" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Trip Planner</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div>
+          <ul class="row nav navbar-nav navbar-right">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <!--<li><a href="/contact">Contact</a></li>-->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
 
     {% block content %}
     {% endblock %}
