@@ -16,6 +16,14 @@ body {
 .row > * {
   float: left; }
 
+.subhead {
+  text-align: center;
+  margin-bottom: 50px; }
+
+.pagination > li > a, .pagination > li > span {
+  border-radius: 50% !important;
+  margin: 0 5px; }
+
 img {
   margin: auto;
   display: block; }

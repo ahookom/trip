@@ -9,7 +9,25 @@
     </ul>
   <!--<img src="https://www.codeproject.com/KB/web-image/Google_map/sampleMap.JPG"></img>-->
 
-  <h3>My Google Maps Demo</h3>
+  <h3 class="subhead">Start planning your trip by selecting restaurants, hotels and activities below</h3>
+  <!--Here are the day buttons-->
+  <div class="container">
+    <ul class="pagination">
+              <!--<li class="disabled"><a href="#">«</a></li>-->
+              {% for day in days %}
+              {% if day === currentDay %}
+              <li class="active"><a href="/{{day}}">{{day}} <span class="sr-only">(current)</span></a></li>
+              {% else %}
+              <li><a href="/{{ day }}">{{ day }}</a></li>
+              {% endif %}
+              <!--<li><a href="/3">3</a></li>
+              <li><a href="/4">4</a></li>
+              <li><a href="/5">5</a></li>-->
+              {% endfor %}
+              <li><a href="/newDay">+</a></li>
+            </ul>
+  </div>
+
     <div id="map"></div>
     <script>
       function initMap() {
