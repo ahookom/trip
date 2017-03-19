@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Search Activities!</h1>
+{% for activity in activities %}
+<li>{{activity.name}}{{activity.age_range}}</li>
+{% endfor %}
+
+
+{% endblock %}

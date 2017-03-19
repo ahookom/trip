@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Search Hotels!</h1>
+{% for hotel in hotels %}
+<li>{{hotel.name}}{{hotel.num_stars}}{{hotel.amenities}}</li>
+{% endfor %}
+
+{% endblock %}
