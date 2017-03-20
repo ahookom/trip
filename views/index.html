@@ -50,16 +50,19 @@
     <div class="row">
         <div class='lg-col-4'>
           <h3><i class="fa fa-check-circle-o"></i> Restaurants</h3>
-          <p><a href='/restaurants/'>Add a restaurant</a></p>
+          {% for restaurant in restaurants%}
+          <li>{{restaurant.venue}}</li>
+          {% endfor %}
+          <p><a href='{{currentDay}}/restaurants/'>Add a restaurant</a></p>
         </div>
         <div class='lg-col-4'>
           <h3><i class="fa fa-check-circle-o"></i> Hotels</h3>
-          <p><a href='/hotels/'>Add a hotel</a></p>
+          <p><a href='{{currentDay}}/hotels/'>Add a hotel</a></p>
 
         </div>
         <div class='lg-col-4'>
           <h3><i class="fa fa-check-circle-o"></i> Activities</h3>
-          <p><a href='/activities/'>Add an activity</a></p>
+          <p><a href='{{currentDay}}/activities/'>Add an activity</a></p>
         </div>
     </div>
 </div>

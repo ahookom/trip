@@ -13,9 +13,9 @@ Activity.belongsTo(Place);
 Restaurant.belongsTo(Place);
 
 Booking.belongsTo(Day);
-Restaurant.hasOne(Booking);
-Hotel.hasOne(Booking);
-Activity.hasOne(Booking);
+Restaurant.hasMany(Booking);
+Hotel.hasMany(Booking);
+Activity.hasMany(Booking);
 
 // console.log(db);
 module.exports= db;
