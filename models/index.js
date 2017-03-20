@@ -5,14 +5,17 @@ const Place = require('./place');
 const Restaurant = require('./restaurant');
 const Activity = require('./activity');
 const Day = require('./day');
+const Booking = require('./booking');
+
 
 Hotel.belongsTo(Place);
-Restaurant.belongsTo(Place);
 Activity.belongsTo(Place);
+Restaurant.belongsTo(Place);
 
-Day.hasMany(Restaurant);
-Day.hasMany(Activity);
-Day.hasOne(Hotel);
+Booking.belongsTo(Day);
+Restaurant.hasOne(Booking);
+Hotel.hasOne(Booking);
+Activity.hasOne(Booking);
 
 // console.log(db);
 module.exports= db;

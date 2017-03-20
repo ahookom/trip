@@ -7,13 +7,9 @@ const Activities = db.models.activity;
 const Places = db.models.place;
 const Hotels = db.models.hotel;
 const Days = db.models.day;
+const Bookings = db.models.booking;
 
 router.get('/', function(req, res, next) {
-  // Days.all()
-  // .then(function(days){
-  //   console.log(days);
-  //   // if(days.length)res.redirect('/' + days.length);
-  //   return
   Days.sync({force: true})
   .then(function(){
     return Days.create({ofTrip: 1})

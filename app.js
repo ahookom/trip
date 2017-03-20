@@ -35,9 +35,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 })
 
-const PORT = 3000;
+const PORT = 1337;
 
-db.sync().then(function(){
+db.sync({force: true}).then(function(){
   app.listen(PORT, function() {
   console.log('listening impatiently on port', PORT);
   });
