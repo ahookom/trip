@@ -2,53 +2,80 @@
   box-sizing: border-box; }
 
 body {
-  background-color: lightgrey; }
+  background-color: #Ffffff; }
 
-.clearfix::before, .container::before, .navbar::before, .clearfix::after, .container::after, .navbar::after {
+.clearfix::before, .center::before, .navbar::before, .clearfix::after, .center::after, .navbar::after {
   clear: both;
   display: block;
   content: ""; }
 
 #map {
-  height: 400px;
-  width: 100%; }
+  height: 250px;
+  width: 850px;
+  margin: auto;
+  margin-bottom: 10px; }
+
+.container {
+  width: 900px;
+  margin: auto !important; }
 
 .row > * {
   float: left; }
 
 .subhead {
-  text-align: center;
-  margin-bottom: 50px; }
+  text-align: center; }
 
 .pagination > li > a, .pagination > li > span {
   border-radius: 50% !important;
-  margin: 0 5px; }
+  margin: auto 5px; }
+
+.center {
+  display: table;
+  margin: auto !important; }
 
 img {
   margin: auto;
   display: block; }
+
+.pagination {
+  padding: auto auto !important; }
 
 li {
   list-style: none;
   margin-right: 8px;
   margin-left: 8px; }
 
-.lg-col-4 {
+.lg-col-3 {
   float: left;
-  width: 33%;
+  width: 25%;
+  padding: 1%;
   margin: auto auto auto auto;
-  display: inline-block; }
+  display: block;
+  text-align: center; }
+
+.lg-col-4 {
+  width: 33%;
+  padding: 1%; }
 
 h1 {
   margin-top: 100px;
   text-align: center; }
 
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.list-group-item {
+  text-align: center; }
+
 .navbar {
   padding: 0 40px;
-  background-color: #ddd; }
+  background-color: #222526; }
 
 .navbar a {
-  color: #444;
+  color: #ffffff;
   text-decoration: none; }
 
 .navbar a:hover {
@@ -58,15 +85,29 @@ h1 {
   list-style-type: none; }
 
 .navbar-inverse {
-  background-color: oldlace; }
+  color: #ffffff;
+  background-color: #222526; }
 
 .navbar-inverse a {
-  color: #bbbbbb; }
+  color: #ffffff; }
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff; }
 
 .navbar-brand {
   float: left;
   font-size: 1.5em;
-  margin-top: 13px; }
+  margin-top: 13px;
+  color: #ffffff; }
+
+.navbar-right {
+  margin-top: 20px;
+  float: right; }
+
+.navbar-left img {
+  margin-top: 15px;
+  margin-right: 10px;
+  width: 40px; }
 
 .navbar-fixed-top {
   position: fixed;

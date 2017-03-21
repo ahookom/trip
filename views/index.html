@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Welcome to Trip Planner</h1>
+<!--<h1>Welcome to Trip Planner</h1>-->
 
 
     <ul>
@@ -9,9 +9,10 @@
     </ul>
   <!--<img src="https://www.codeproject.com/KB/web-image/Google_map/sampleMap.JPG"></img>-->
 
-  <h3 class="subhead">Start planning your trip by selecting restaurants, hotels and activities below</h3>
+  <!--<h3 class="subhead">Day of Trip</h3>-->
   <!--Here are the day buttons-->
-  <div class="container">
+  <div class="center">
+     <h3> Day of Trip </h3>
     <ul class="pagination">
               <!--<li class="disabled"><a href="#">«</a></li>-->
               {% for day in days %}
@@ -29,6 +30,7 @@
   </div>
 
     <div id="map"></div>
+
     <script>
       function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};
@@ -46,24 +48,76 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwCZ2SngOxzWvdSAL0ICLRW5P3czSwBzI&callback=initMap">
     </script>
 
-<div class='container'>
+<!--<div class='container'>
     <div class="row">
-        <div class='lg-col-4'>
-          <h3><i class="fa fa-check-circle-o"></i> Restaurants</h3>
+        <div class='lg-col-3 right'>
+          <h3>Restaurants</h3>
           {% for restaurant in restaurants%}
           <li>{{restaurant.venue}}</li>
           {% endfor %}
           <p><a href='{{currentDay}}/restaurants/'>Add a restaurant</a></p>
         </div>
-        <div class='lg-col-4'>
-          <h3><i class="fa fa-check-circle-o"></i> Hotels</h3>
+        <div class='lg-col-3 right'>
+          <h3>Hotels</h3>
           <p><a href='{{currentDay}}/hotels/'>Add a hotel</a></p>
-
         </div>
-        <div class='lg-col-4'>
-          <h3><i class="fa fa-check-circle-o"></i> Activities</h3>
+        <div class='lg-col-3'>
+          <h3>Activities</h3>
           <p><a href='{{currentDay}}/activities/'>Add an activity</a></p>
         </div>
     </div>
+</div>-->
+
+
+<div class="container clearfix">
+<div class="list-group lg-col-4 float-left">
+  <a href="#" class="list-group-item active">Restaurants</a>
+          {% for restaurant in restaurants%}
+          <a href="#" class="list-group-item">{{restaurant.venue}}</a>
+          {% endfor %}
+          <a href class="list-group-item"='{{currentDay}}/restaurants/'>Add a restaurant</a>
 </div>
+<div class="list-group lg-col-4 float-left">
+  <a href="#" class="list-group-item active">Hotels</a>
+  <a href="#" class="list-group-item">Hotel One</a>
+  <a href="#" class="list-group-item">Hotel Two</a>
+</div>
+<div class="list-group lg-col-4 float-right">
+  <a href="#" class="list-group-item active">Activities</a>
+  <a href="#" class="list-group-item">Activity One</a>
+  <a href="#" class="list-group-item">Activity Two</a>
+</div>
+</div>
+
+
+
+<!--<table class="table">
+    <thead>
+      <tr>
+        <th>restaurants</th>
+        <th>hotels</th>
+        <th>activities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>-->
 {% endblock %}
+
+
+ 
