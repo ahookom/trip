@@ -17,7 +17,7 @@
               <!--<li class="disabled"><a href="#">«</a></li>-->
               {% for day in days %}
               {% if day === currentDay %}
-              <li class="active"><a href="/{{day}}">{{day}} <span class="sr-only">(current)</span></a></li>
+              <li class="active btn-primary"><a href="/{{day}}">{{day}} <span class="sr-only">(current)</span></a></li>
               {% else %}
               <li><a href="/{{ day }}">{{ day }}</a></li>
               {% endif %}
@@ -75,7 +75,7 @@
           {% for restaurant in restaurants%}
           <a href="#" class="list-group-item">{{restaurant.venue}}</a>
           {% endfor %}
-          <a href class="list-group-item"='{{currentDay}}/restaurants/'>Add a restaurant</a>
+          <a href='{{currentDay}}/restaurants/' class="list-group-item">Add a restaurant</a>
 </div>
 <div class="list-group lg-col-4 float-left">
   <a href="#" class="list-group-item active">Hotels</a>
@@ -120,4 +120,3 @@
 {% endblock %}
 
 
- 

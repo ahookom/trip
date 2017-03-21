@@ -15,6 +15,9 @@ router.get('/', function(req, res, next) {
     return Bookings.sync({force: true });
   })
   .then(function(){
+    return Days.sync({force: true});
+  })
+  .then(function(){
     return Days.create({ofTrip: 1})
   })
   .then(function(){
