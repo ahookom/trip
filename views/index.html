@@ -16,7 +16,7 @@
     <ul class="pagination">
               <!--<li class="disabled"><a href="#">«</a></li>-->
               {% for day in days %}
-              {% if day === currentDay %}
+              {% if day === 1 %}
               <li class="active btn-primary"><a href="/{{day}}">{{day}} <span class="sr-only">(current)</span></a></li>
               {% else %}
               <li><a href="/{{ day }}">{{ day }}</a></li>
@@ -33,9 +33,9 @@
 
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: 40.705137, lng: -74.007624};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 17,
           center: uluru
         });
         var marker = new google.maps.Marker({

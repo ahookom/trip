@@ -22,6 +22,9 @@ body {
 .row > * {
   float: left; }
 
+.btn-primary {
+  background-color: blue; }
+
 .subhead {
   text-align: center; }
 

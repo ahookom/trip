@@ -114,7 +114,7 @@ router.get('/:day', function(req,res,next){
       days.push(i);
     }
     console.log({currentDay, days, restaurants, hotel, activities});
-    res.render('index', {currentDay, days, restaurants, hotel, activities});
+    res.render('index', {currentDay: {currentDay}, days, restaurants, hotel, activities});
   })
   .catch(next);
 

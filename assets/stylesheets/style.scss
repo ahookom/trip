@@ -50,6 +50,9 @@ body {
 .row > * {
   float: left;
 }
+.btn-primary {
+  background-color: blue;
+}
 
 .subhead {
   text-align: center;
@@ -144,13 +147,13 @@ h1{
 .navbar-brand {
   float: left;
   font-size: 1.5em;
-  margin-top: 13px; 
+  margin-top: 13px;
   color: #ffffff;
   }
 
 .navbar-right {
   margin-top: 20px;
-  float: right; 
+  float: right;
 }
 
 .navbar-left img{
@@ -162,6 +165,6 @@ h1{
 .navbar-fixed-top {
   position: fixed;
   top: 0;
-  width: 100%; 
+  width: 100%;
   }
 
